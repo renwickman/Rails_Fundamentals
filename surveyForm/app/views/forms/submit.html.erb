@@ -1,0 +1,13 @@
+<%= flash[:success] %>
+<%= flash[:errors] %>
+
+<h2>Submitted Information: </h2>
+
+<p> Name: <%= @form.name =%> </p>
+<p> Dojo Location: <%= @form.location =%> </p>
+<p> Language: <%= @form.language =%> </p>
+<p> Comment: <%= @form.comment =%> </p>
+
+<p>
+<button class="btn btn-default"><a href="/">Go Back</a></button>
+</p>
