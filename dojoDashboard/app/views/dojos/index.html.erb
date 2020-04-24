@@ -1,0 +1,25 @@
+<h1>Dojo Dashboard#index</h1>
+
+Listing <%= @dojos.count %> Dojos
+
+<button class="btn btn-default"><a href="/new">Add Dojo</a></button>
+
+<table>
+    <thead>
+        <th>Branch</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+    </thead>
+    <% @dojos.each do |x| %>
+    <tbody>
+        <td><%=x.branch%></td>
+        <td><%=x.street%></td>
+        <td><%=x.city%></td>
+        <td><%=x.state%></td>
+        <td><a href="/dojo/<%= x.id %>">Show</td>
+        <td><a href="/dojo/edit/<%= x.id %>">Edit</td>
+        <td><a href="/dojo/<%= x.id %>" data-method="delete">Delete</td>
+    </tbody>
+    <% end %>
+</table>
